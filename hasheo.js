@@ -20,10 +20,10 @@ const compareContra = async (req, res) => {
     });
 };
 
-const shalom = {
+const hash = {
     hashearContra,
     compareContra
 };
 
-export default shalom;
+export default hash;
 
