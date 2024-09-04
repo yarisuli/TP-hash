@@ -12,5 +12,7 @@ app.get("/", (_, res) => {
 
 app.post("/hash", hasheo.hashearContra);
 app.post("/compare", hasheo.compareContra);
+app.post("/token", hasheo.createToken);
+app.post("/verify", hasheo.verifyToken);
 
 app.listen(port, () => console.log("Running on port" + " " + port))

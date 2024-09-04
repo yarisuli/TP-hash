@@ -1,4 +1,4 @@
-POST http://localhost:3000/hash HTTP/1.1 
+POST http://localhost:3000/hash HTTP/1.1
 Content-Type: application/json
 
 {
@@ -7,10 +7,31 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:3000/compare HTTP/1.1 
+POST http://localhost:3000/compare HTTP/1.1
 Content-Type: application/json
 
 {
     "password": "hola",
     "hash": "$2a$10$b9Rv9FBQ9YwDbvSXxjzpkuHz1ls.DWvwJGsWtFjLnhHUhMMlwd/u6"
+}
+
+###
+
+POST http://localhost:3000/token HTTP/1.1
+Content-Type: application/json
+
+{
+    "payload":{
+        "example": "example",
+        "example2": "example2"
+    }
+}
+
+###
+
+POST http://localhost:3000/verify HTTP/1.1
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleGFtcGxlIjoiZXhhbXBsZSIsImV4YW1wbGUyIjoiZXhhbXBsZTIiLCJpYXQiOjE3MjU0NTcyMTgsImV4cCI6MTcyNTQ2MDgxOH0.hMDSRjAhqbteLeiKXSBpKUFuTa63KzBZLUhMZ5FM5_Y"
 }
